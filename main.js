@@ -146,3 +146,41 @@ function logicalGateXnor(a, b) {
 }
 console.log(logicalGateXnor(true, true));
 
+
+// Loops: while and for
+/*a factorial function iterative: which should solve the factorial of x in an iterative way*/
+function FactorialIiterative(x) {
+    let NumFactIteractive = 1
+    if (x === 0 || x === 1) {
+        return 1;
+    }
+    else if (x > 1) {
+        for (let i = 1; i <= x; i++) {
+            NumFactIteractive = NumFactIteractive * (i)
+        }
+        return NumFactIteractive;
+    }
+    else {
+        return "Please enter positive number"
+    }
+
+}
+console.log(FactorialIiterative(4));
+
+/*a factorial function recursive: which should solve the factorial of x in a recursive way*/
+function FactorialRecursive(y) {
+    let NumFactRecursive = y
+    if (y === 0 || y === 1) {
+        return 1;
+    }
+    else if (y < 0) {
+        return "Please enter positive number"
+    }
+    while (y > 1) {
+        NumFactRecursive = NumFactRecursive * (y - 1)
+        y--;
+
+    }
+    return NumFactRecursive;
+}
+console.log(FactorialRecursive(6));
