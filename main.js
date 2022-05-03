@@ -41,3 +41,40 @@ function bin2dec(str) {
 }
 bin2decNumber = "1010"
 console.log(bin2dec(bin2decNumber));
+
+// Comparisons
+/*a function to compute the sum of the two given integers. If the two values are same, then returns triple their sum*/
+function SumtwoNumber(x3, x4) {
+    if (x3 === x4) {
+        return (3 * (x3 + x4));
+    }
+    else {
+        return (x3 + x4)
+    }
+}
+console.log(SumtwoNumber(2, 2));
+
+/*a function to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19.*/
+function AbsoluteDifference(x6) {
+    const x5 = 19
+    let x7 = Math.abs(x6 - x5);
+    if (x6 > x5) {
+        return (3 * x7)
+    }
+    else {
+        return (x7);
+    }
+}
+console.log(AbsoluteDifference(20));
+
+/*a function to create a new string adding "Lo" in front of a given string. If the given string begins with "Lo" then return the original string*/
+function CheckString(str) {
+    if (str.startsWith("Lo")) {
+        return str
+    }
+    else {
+        return ("Lo".concat(str))
+    }
+}
+console.log(CheckString("Agency"));
+
