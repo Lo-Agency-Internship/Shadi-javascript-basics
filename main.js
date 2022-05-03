@@ -16,3 +16,13 @@ let swap = number1
 number1 = number2
 number2 = swap
 alert("number one is: " + number1 + " " + "number two is: " + number2);
+
+// Data types
+let userfirstname = prompt("Please enter your first name: ")
+let userlastname = prompt("Please enter your last name: ")
+let userage = prompt("Please enter your age: ")
+let usergender = prompt("Please enter your gender: ")
+alert(`FirstName: ${userfirstname}, LastName: ${userlastname} , Age: ${userage} , Gender: ${usergender}`)
+
+let Bonus = (`FirstName: ${userfirstname} , LastName: ${userlastname} , Age: ${userage} , Gender: ${usergender}`);
+document.getElementById("bonus-section").innerHTML = Bonus
