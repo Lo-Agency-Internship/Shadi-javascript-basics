@@ -78,3 +78,71 @@ function CheckString(str) {
 }
 console.log(CheckString("Agency"));
 
+
+// Logical operators
+function logicalGateBuffer(a) {
+    return a
+}
+console.log(logicalGateBuffer(true));
+
+
+function logicalGateNot(a) {
+    return !a
+}
+
+console.log(logicalGateNot(false));
+
+
+function logicalGateAnd(a, b) {
+    if (a === true && b === true) {
+        return true
+    }
+    return false
+}
+console.log(logicalGateAnd(false, false));
+
+
+function logicalGateOr(a, b) {
+    if (a === true || b === true) {
+        return true
+    }
+    return false
+}
+console.log(logicalGateOr(true, false));
+
+
+function logicalGateNand(a, b) {
+    if (a === true && b === true) {
+        return false
+    }
+    return true
+}
+console.log(logicalGateNand(true, true));
+
+
+function logicalGateNor(a, b) {
+    if (a === false && b === false) {
+        return true
+    }
+    return false
+}
+console.log(logicalGateNor(true, false));
+
+
+function logicalGateXor(a, b) {
+    if (a === b) {
+        return false
+    }
+    return true
+}
+console.log(logicalGateXor(true, true));
+
+
+function logicalGateXnor(a, b) {
+    if (a === b) {
+        return true
+    }
+    return false
+}
+console.log(logicalGateXnor(true, true));
+
