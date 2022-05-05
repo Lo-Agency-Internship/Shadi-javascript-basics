@@ -35,7 +35,7 @@ function rand(x1, x2) {
 let randomNumber = rand(0, 100);
 console.log(randomNumber);
 
-/* a function to convert a binary number to a decimal number*/
+// /* a function to convert a binary number to a decimal number*/
 function bin2dec(str) {
     return parseInt(str, 2);
 }
@@ -184,3 +184,58 @@ function FactorialRecursive(y) {
     return NumFactRecursive;
 }
 console.log(FactorialRecursive(6));
+
+// Functions
+const ArrayRandom = [];
+intervalNumbers = [15, 50];
+console.log(rand(intervalNumbers[0], intervalNumbers[1]));
+for (let i = 1; i <= 3; i++) {
+    let result = rand(intervalNumbers[0], intervalNumbers[1]);
+    ArrayRandom.push(result);
+    console.log("steps", ArrayRandom);
+}
+console.log(ArrayRandom);
+
+/*map, your custom function signature: (arr: any[], f: Function): any[]*/
+function customMap(ArrayRandom, f) {
+    const ArrayMap = [];
+    for (let i = 0; i < ArrayRandom.length; i++) {
+        let resultMap = f(ArrayRandom[i])
+        ArrayMap.push(resultMap);
+    }
+    return ArrayMap;
+}
+const ArrayMap = customMap(ArrayRandom, function (item, index) {
+    return item * 2
+});
+console.log(ArrayMap);
+
+/*filter, your custom function signature: (arr: any[], f: Function): any[]*/
+function filter(ArrayRandom, f) {
+    const Arrayfilter = [];
+    for (let i = 0; i < ArrayRandom.length; i++) {
+        let resultFilter = f(ArrayRandom[i])
+        if (resultFilter === true) {
+            Arrayfilter.push(ArrayRandom[i]);
+        }
+        else { console.log("There is not any number") }
+    }
+    return Arrayfilter;
+}
+const Arrayfilter = filter(ArrayRandom, function (item, index) {
+    return item > 2
+});
+console.log(Arrayfilter);
+
+/*reduce, your custom function signature: (arr: any[], f: Function): any[]*/
+function reduce(ArrayRandom, f) {
+    let resultreduce = 0;
+    for (let i = 0; i < ArrayRandom.length; i++) {
+        resultreduce = f(ArrayRandom[i], resultreduce);
+    }
+    return resultreduce;
+}
+const finalreduce = reduce(ArrayRandom, function (accumulator, currentValue) {
+    return accumulator + currentValue
+});
+console.log(finalreduce);
